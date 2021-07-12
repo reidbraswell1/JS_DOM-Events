@@ -1,22 +1,65 @@
 /*----------- Exercise #1: SELECTING/MANIPULATING ELEMENTS -----------*/
 
 // Select Node #1 and change the text to: "I used the getElementById("node1") method to access this"
+document.getElementById("node1").innerText =
+  'I used the getElementById("node1") method to access this';
 // Select Node #2 and change the text to: "I used the getElementByClassName("node2") method to access this" */
+let node2Class = document.getElementsByClassName("node2");
+for (let i = 0; i < node2Class.length; i++) {
+  node2Class[i].innerText =
+    'I used the getElementByClassName("node2") method to access this';
+}
 // Select ALL the h3 tags and change the text to: "I used the getElementByTagName("h3") method to access all of these" */
+let h3Elements = document.getElementsByTagName("h3");
+for (let i = 0; i < h3Elements.length; i++) {
+  h3Elements[i].innerText =
+    'I used the getElementByTagName("h3") method to access all of these';
+}
 
 /*----------- Exercise #2: CREATING/APPENDING/INSERTING ELEMENTS/OBJECTS -----------*/
 
 // TODO: Create a paragraph element using this element.createElement() and put this text inside "This node was created using the createElement() method"
 // TODO: Append the created node to the parent node using the element.appendChild() method
+let parent = document.getElementById("parent");
+let paragraph = document.createElement("p");
+let textNode = document.createTextNode(
+  "This node was created using the createElement() method"
+);
+paragraph.appendChild(textNode);
+parent.appendChild(paragraph);
 
 // TODO: Create a <a> element using this element.createElement() and put this text inside "I am a <p> tag"
 // TODO: Insert the created <a> in the parent but before the <p> you just created using the element.insertBefore() method
 // BONUS: Add a link href to the <a>
+let anchor = document.createElement("a");
+anchor.innerText = "Visit me";
+anchor.href = "https://truecoders.io";
+parent.insertBefore(anchor, paragraph);
 
 /*----------- Exercise #3: REMOVING/REPLACING ELEMENTS/OBJECTS -----------*/
 
 // TODO: Replace the "Child Node" with a new <p> element that reads "New Child Node"
 // TODO: Remove the "New Child Node"
+let parent2 = document.getElementById("exercise3");
+let n1 = document.getElementById("N1");
+let newParagraph = document.createElement("p");
+let newTextNode = document.createTextNode("New Child Node");
+newParagraph.appendChild(newTextNode);
+parent2.replaceChild(newParagraph, n1);
+
+if (parent2.hasChildNodes()) {
+    let children = parent2.childNodes;
+  
+    for (let i = 0; i < children.length; i++) {
+        console.log(children[i]);
+      // do something with each child as children[i]
+      // NOTE: List is live! Adding or removing children will change the list's `length`
+    }
+  }
+let childNodes = parent2.childNodes;
+while (parent2.firstChild) {
+    parent2.removeChild(newParagraph);
+  }
 
 /*----------- Exercise #4: ANIMATIONS ----------- */
 
