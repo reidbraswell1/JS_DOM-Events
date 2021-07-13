@@ -89,7 +89,7 @@ body {
 
 /* The Modal (background) */
 #modal-container {
-  display: none; /* Hidden by default */
+  display: noney; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -103,15 +103,17 @@ body {
 /* Modal Content/Box */
 #modal-content {
   background-color: #fefefe;
+  color: black;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 100%; /* Could be more or less, depending on screen size */
+  height: 100%; /* Full height */
 }
 
 /* The Close Button */
 #close {
-  color: #aaa;
+  color: black;
   float: right;
   font-size: 28px;
   font-weight: bold;
