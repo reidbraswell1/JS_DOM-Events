@@ -141,6 +141,9 @@ function show() {
   modalContent.id="modal-content";
   let modalClose = document.createElement("span");
   modalClose.id="modal-close";
-  let modalTextNode = document.createTextNode("Clicking the button triggers the onclidk event, which calls the JS function show()... which alerts the user");
-  modalParagraph.appendChild(modalTextNode);
+  let modalTextNode = document.createTextNode("Clicking the button triggers the onclick event, which calls the JS function show()... which alerts the user");
+  modalContent.appendChild(modalTextNode);
+  modalDiv.appendChild(modalContent);
+  let exercise5Container = document.getElementsByClassName("exercise5");
+  exercise5Container[0].appendChild(modalDiv);
 }
