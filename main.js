@@ -43,24 +43,15 @@ parent.insertBefore(anchor, paragraph);
 let parent2 = document.getElementById("exercise3");
 let n1 = document.getElementById("N1");
 let newParagraph = document.createElement("p");
+newParagraph.id="N2";
 let newTextNode = document.createTextNode("New Child Node");
 newParagraph.appendChild(newTextNode);
 parent2.replaceChild(newParagraph, n1);
 
-if (parent2.hasChildNodes()) {
-    let children = parent2.childNodes;
-  
-    for (let i = 0; i < children.length; i++) {
-        console.log(children[i]);
-      // do something with each child as children[i]
-      // NOTE: List is live! Adding or removing children will change the list's `length`
-    }
-  }
-let childNodes = parent2.childNodes;
-while (parent2.firstChild) {
-    parent2.removeChild(newParagraph);
-  }
-
+let n2 = document.getElementById("N2");
+while(n2.hasChildNodes()) {
+  n2.removeChild(n2.firstChild);
+}
 /*----------- Exercise #4: ANIMATIONS ----------- */
 
 // TODO: Write your JavaScript here to make the red box go from right to left
