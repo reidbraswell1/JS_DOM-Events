@@ -135,15 +135,29 @@ function move() {
 // This div should be a 'modal' that covers the main content on the screen
 // BONUS: The modal popup should be able to be closed. Refactor for this functionality
 function show() {
-  let modalDiv = document.createElement("div");
-  modalDiv.id="modal-container";
-  let modalContent = document.createElement("p");
-  modalContent.id="modal-content";
+  let modalContainer = document.createElement("div");
+  modalContainer.id="modal-container";
+
   let modalClose = document.createElement("span");
-  modalClose.id="modal-close";
+  let modalCloseText = document.createTextNode("x");
+  modalClose.append(modalCloseText);
+  modalClose.className="modal-close";
+  modalClose.onclick=function() { modalContainer.style.display="none"; }
+  
+  let modalContent = document.createElement("h3");
+  modalContent.id="modal-content";
   let modalTextNode = document.createTextNode("Clicking the button triggers the onclick event, which calls the JS function show()... which alerts the user");
   modalContent.appendChild(modalTextNode);
-  modalDiv.appendChild(modalContent);
+  modalContent.appendChild(modalClose);
+
+  modalContainer.appendChild(modalClose);
+  modalContainer.appendChild(modalContent);
+
   let exercise5Container = document.getElementsByClassName("exercise5");
-  exercise5Container[0].appendChild(modalDiv);
+  exercise5Container[0].appendChild(modalContainer);
+}
+
+function closeModal() {
+  let modalContainer = document.getElementById("modal-container");
+  alert("here");
 }
