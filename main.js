@@ -139,8 +139,8 @@ function show() {
   modalContainer.id="modal-container";
 
   let modalClose = document.createElement("span");
-  let modalCloseText = document.createTextNode("x");
-  modalClose.append(modalCloseText);
+  modalClose.innerHTML="&times;"
+  //modalClose.append(modalCloseText);
   modalClose.className="modal-close";
   modalClose.onclick=function() { modalContainer.style.display="none"; }
   
