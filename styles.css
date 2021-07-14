@@ -96,31 +96,30 @@ body {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: white;
 }
 
 /* Modal Content/Box */
 #modal-content {
-  background-color: #fefefe;
+  background-color: white;
   color: black;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
-  width: 100%; /* Could be more or less, depending on screen size */
-  height: 100%; /* Full height */
 }
 
 /* The Close Button */
-#close {
+.modal-close {
   color: black;
   float: right;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
+  margin-top: 1%;
+  margin-right: 1%;
+  border: 1px solid blue;
 }
 
-#close:hover,
-#close:focus {
+.modal-close:hover,
+.modal-close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
