@@ -18,7 +18,7 @@
 * Add a link href to the `<a>` by selecting the anchorElement.link property
 
 ## Exercise #3: REMOVING/REPLACING ELEMENTS/OBJECTS
-* Replace the "Child Node" with a new <p> element that reads "New Child Node" using the replaceChild() method.
+* Replace the "Child Node" with a new `<p>` element that reads "New Child Node" using the replaceChild() method.
 
 * Remove the "New Child Node" using the remove() method or removeChild() method.
 
