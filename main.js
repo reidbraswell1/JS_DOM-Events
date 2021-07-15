@@ -167,8 +167,3 @@ function show() {
   let exercise5Container = document.getElementsByClassName("exercise5");
   exercise5Container[0].appendChild(modalContainer);
 }
-
-function closeModal() {
-  let modalContainer = document.getElementById("modal-container");
-  alert("here");
-}
